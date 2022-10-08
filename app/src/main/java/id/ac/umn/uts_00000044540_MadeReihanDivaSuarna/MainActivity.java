@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         btnprofile = findViewById(R.id.btnprofile);
         btnlibrary = findViewById(R.id.btnlibrary);
 
+        btnprofile.setOnClickListener(v2 -> {
+            Intent intent = new Intent(MainActivity.this, ProfilePage.class);
+            startActivity(intent);
+        });
+
         btnlibrary.setOnClickListener(v -> {
             final Dialog dialog = new Dialog(MainActivity.this);
             dialog.setContentView(R.layout.layout_customdialog);
@@ -44,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
+
 
 
 //            if(EditTextName.getText().toString().isEmpty()){

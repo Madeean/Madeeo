@@ -2,30 +2,57 @@ package id.ac.umn.uts_00000044540_MadeReihanDivaSuarna;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class LibraryPage extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+
+
+public class LibraryPage extends AppCompatActivity {
+    RecyclerView recyclerView;
+    LinearLayoutManager linearLayoutManager;
+    AdapterData adapterData;
+    List<String> listData;
     Toolbar my_toolbar;
+
+    public String name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library_page);
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        name = intent.getStringExtra("name");
         Toast.makeText(this, "Welcome " + name, Toast.LENGTH_SHORT).show();
 
         my_toolbar = findViewById(R.id.my_toolbar);
         my_toolbar.setTitle("Hello, " + name);
+        my_toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(my_toolbar);
 
+        recyclerView = findViewById(R.id.rvdata);
+        listData = new ArrayList<>();
 
+        for(int i = 1; i < 10; i++){
+            listData.add("Video " + i);
+        }
+
+        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        adapterData = new AdapterData(this, listData,name);
+        recyclerView.setAdapter(adapterData);
+        adapterData.notifyDataSetChanged();
 
 
 
@@ -49,7 +76,7 @@ public class LibraryPage extends AppCompatActivity {
                 goToProfil();
                 return true;
             case R.id.kembali:
-                goToProfil();
+                GotoHome();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -57,7 +84,14 @@ public class LibraryPage extends AppCompatActivity {
     }
 
     private void goToProfil() {
+        Intent intent = new Intent(getApplicationContext(), ProfilePage.class);
+        startActivity(intent);
+    }
+
+    private void GotoHome() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
+
+
 }

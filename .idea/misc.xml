@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/drawable/arrow_back.xml" value="0.1075" />
         <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/drawable/ic_launcher_background.xml" value="0.127" />
-        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/activity_library_page.xml" value="0.15885416666666666" />
+        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/activity_detail_video.xml" value="0.20364583333333333" />
+        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/activity_library_page.xml" value="0.2" />
         <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
+        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/activity_profile_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/item_data.xml" value="0.253125" />
         <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/layout_customdialog.xml" value="0.21510416666666668" />
         <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/main_menu.xml" value="0.2328125" />
         <entry key="..\:/UTSDANUAS/sms5/UTS/mobile-app-lab/MobileUts/app/src/main/res/layout/toolbar.xml" value="0.191025641025641" />

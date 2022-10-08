@@ -1,94 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:orientation="vertical"-->
-<!--    tools:context=".LibraryPage">-->
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-
-<!--        app:titleTextColor="@color/white"-->
-<!--        android:id="@+id/my_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:elevation="4dp"-->
-<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
-<!--    <LinearLayout-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <ImageView-->
-<!--                android:layout_gravity="center"-->
-<!--                android:src="@drawable/bebek"-->
-<!--                android:layout_width="50dp"-->
-<!--                android:layout_height="50dp"/>-->
-<!--            <TextView-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="14sp"-->
-<!--                android:text="Video 1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <ImageView-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginLeft="200dp"-->
-
-<!--                android:src="@drawable/minus"-->
-
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"/>-->
-
-<!--        </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <ImageView-->
-<!--                android:layout_gravity="center"-->
-<!--                android:src="@drawable/bebek"-->
-<!--                android:layout_width="50dp"-->
-<!--                android:layout_height="50dp"/>-->
-<!--            <TextView-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="14sp"-->
-<!--                android:text="Video 1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <ImageView-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginLeft="200dp"-->
-
-<!--                android:src="@drawable/minus"-->
-
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"/>-->
-
-<!--        </LinearLayout>-->
-
-
-<!--    </LinearLayout>-->
-
-<!--</LinearLayout>-->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -101,72 +11,81 @@
         android:id="@+id/my_toolbar"
         layout="@layout/toolbar" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvdata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-                <ImageView
-                    android:layout_gravity="center"
-                    android:src="@drawable/bebek"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"/>
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:text="Video 1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="200dp"
-
-                    android:src="@drawable/minus"
-
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:src="@drawable/bebek"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"/>
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:text="Video 1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="200dp"
-
-                    android:src="@drawable/minus"
-
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
-
-            </LinearLayout>
+        />
 
 
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/bebek"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:text="Video 1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="200dp"-->
+
+<!--                    android:src="@drawable/minus"-->
+
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/bebek"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:text="Video 1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="200dp"-->
+
+<!--                    android:src="@drawable/minus"-->
+
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"/>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </LinearLayout>-->
 
 </LinearLayout>
