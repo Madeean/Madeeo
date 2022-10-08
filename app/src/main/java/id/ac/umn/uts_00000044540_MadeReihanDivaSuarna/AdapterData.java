@@ -14,12 +14,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import java.util.List;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     List<String> listData;
     LayoutInflater layoutInflater;
     String name;
+    LinearLayout Yes,No;
 
     public AdapterData(Context context, List<String> listData, String name) {
         this.listData = listData;
@@ -63,7 +66,31 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
         holder.DelData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "del data dipencet" , Toast.LENGTH_SHORT).show();
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(v.getContext());
+                bottomSheetDialog.setContentView(R.layout.bottom_sheet_dialog);
+                bottomSheetDialog.setCanceledOnTouchOutside(false);
+                bottomSheetDialog.show();
+
+                Yes = bottomSheetDialog.findViewById(R.id.Yes);
+                No = bottomSheetDialog.findViewById(R.id.No);
+
+                No.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+                Yes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listData.remove(position);
+                        notifyItemRemoved(position);
+                        notifyItemRangeChanged(position, listData.size());
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
             }
         });
     }
@@ -77,11 +104,13 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
         TextView textdata;
         ImageView DelData;
         LinearLayout listData;
+
         public HolderData(@NonNull View itemView) {
             super(itemView);
             textdata = itemView.findViewById(R.id.namaList);
             DelData = itemView.findViewById(R.id.DelData);
             listData = itemView.findViewById(R.id.listData);
+
 
         }
     }

@@ -54,8 +54,7 @@ public class DetailVideo extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
 
         videoView = findViewById(R.id.videoView);
-        Uri uri = Uri.parse("https://file-examples.com/storage/feb2e515cc6339d7ba1ffcd/2017/04/file_example_MP4_640_3MG.mp4");
-        videoView.setVideoURI(uri);
+        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.detail_video);
         videoView.setMediaController(mediaController);
 
         videoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
